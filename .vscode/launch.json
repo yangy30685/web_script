@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "node_js lanuch",
+            "program": "${workspaceFolder}/nodejs/njs_5.js"
+        },
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "algorithem lanuch",
+            "file":"${workspaceFolder}/js/index.html"
+        },
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "c1",
+            //"url": "http://localhost:80",
+            "file": "${workspaceFolder}/c1/index.html"
+        },
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "c2",
+            //"url": "http://localhost:80",
+            //"webRoot": "${workspaceFolder}",
+            "file":"${workspaceFolder}/c2/index.html",
+        },
+
+    ]
+}
