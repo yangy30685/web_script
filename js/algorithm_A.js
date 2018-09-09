@@ -1,8 +1,9 @@
-/**
- *DrYangStudio 
- *ref = http://www.cnblogs.com/MythLeige/p/6047838.html
- *25/06/2018
- */
+/****************************************************************
+* @author: Dryang
+* @web: https://yangspot.com
+* @date: 2018-09-09
+* @src: http://www.cnblogs.com/MythLeige/p/6047838.html
+****************************************************************/
 
 var str1 = 'abcdefgh';
 var str2 = 'abcdcba';
@@ -26,7 +27,8 @@ function demo2(str) {
 demo2(str1);
 demo2(str2);
 
-/*********************************************/
+/************************* Seperate Line *************************/
+
 /*The indexOf() method returns the first index 
  *at which a given element can be found in the array, 
  *or -1 if it is not present.
@@ -43,7 +45,8 @@ function  demo3(arr) {
 }
 console.log(demo3(arr1));
 
-/*********************************************/
+/************************* Seperate Line *************************/
+
 var str1='jhadfgskjfajhdewqe';
 var arr1=str1.split('');
 
@@ -108,7 +111,8 @@ Math.max.apply(" ",arr_Max);
 console.log(typeof(Math));
 
 
-/*********************************************/
+/************************* Seperate Line *************************/
+
 /*
  *bubble sorting
  */
@@ -156,7 +160,8 @@ function demo6(arr)
 console.log(arr1);
 console.log(demo6(arr1));
 
-/*********************************************/
+/************************* Seperate Line *************************/
+
 /*
  *quick sorting
  */
@@ -197,8 +202,8 @@ console.log(array1.concat(array2));
 console.log(([].concat(array1)+","+[].concat(array2)).split(","));
 // expected output: Array ["a", "b", "c", "d", "e", "f"]
 
+/************************* Seperate Line *************************/
 
-/*********************************************/
 /*
  *swap without temp variable
  */
@@ -213,7 +218,8 @@ function demo8(a)
 console.log(a);
 console.log(demo8(a)); 
 
-/*********************************************/
+/************************* Seperate Line *************************/
+
 /*
  *demo of math
  */
@@ -225,7 +231,8 @@ var min2=Math.min(...arr1);
 console.log(max-min);
 console.log(max2-min2);
 
-/*********************************************/
+/************************* Seperate Line *************************/
+
 /*
  *generate random string with n length
  */
@@ -273,8 +280,8 @@ function demo10_A(min, max)
 }
 console.log(demo10_A(0.1, 100.8));
 
+/************************* Seperate Line *************************/
 
-/*********************************************/
 /*
  *search all tags
  */
@@ -308,3 +315,4 @@ var text = document.getElementById('text');
 //use function demo11 to get function 
 var cs = demo11(text,'cs');  
 console.log(cs);//[div.cs, p.cs]    
+
