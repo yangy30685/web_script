@@ -7,7 +7,6 @@ $(".next").click(
 		function(){
 			nextimg();
 		}
-
 	)
 
 $(".prev").click(
@@ -19,24 +18,24 @@ $(".prev").click(
 
 //previous slide
 	function previmg()
-	{
-		cArr.unshift(cArr[6]);
-		cArr.pop();
+		{
+			cArr.unshift(cArr[6]);
+			cArr.pop();
 
-		//i is index starts from 
-		//e is the currernt element
-		//each is a loop remove the current class and add the class with index i
-		$("li").each(
-			function(i,e)
-			{$(e).removeClass().addClass(cArr[i]);}
-			)
-		index--;
-		if(index<0)
-			{
-				index=6;
-			}
-		show();
-	}
+			//i is index starts from 
+			//e is the currernt element
+			//each is a loop remove the current class and add the class with index i
+			$("li").each(
+				function(i,e)
+				{$(e).removeClass().addClass(cArr[i]);}
+				)
+			index--;
+			if(index<0)
+				{
+					index=6;
+				}
+			show();
+		}
 
 //next slide
 	function nextimg()
@@ -61,25 +60,25 @@ $a.each(function()
 		$(this).click(
 		function()
 		{
-			var myindex=$(this).index();
-			var b=myindex-index;
-			if(b==0){return;}
+			var myindex = $(this).index();
+			var b = myindex-index;
+			if(b == 0){return;}
 			else if(b>0) 
 			{
-			var newarr=cArr.splice(0,b);
-				cArr=$.merge(cArr,newarr);
+			var newarr = cArr.splice(0,b);
+				cArr = $.merge(cArr,newarr);
 			$("li").each(function(i,e){$(e).removeClass().addClass(cArr[i]);});
-				index=myindex;
+				index = myindex;
 			show();
 			}
 			else if(b<0)
 			{
 				cArr.reverse();
-			var oldarr=cArr.splice(0,-b);
-				cArr=$.merge(cArr,oldarr);
+			var oldarr = cArr.splice(0,-b);
+				cArr = $.merge(cArr,oldarr);
 				cArr.reverse();
 			$("li").each(function(i,e){$(e).removeClass().addClass(cArr[i]);});
-				index=myindex;
+				index = myindex;
 			show();
 			}
 		})
@@ -87,7 +86,9 @@ $a.each(function()
 
 //change via the buttons
 
-function show(){$($s).eq(index).addClass("blue").parent().siblings().children().removeClass("blue");}
+function show() {
+	$($s).eq(index).addClass("blue").parent().siblings().children().removeClass("blue");
+}
 	$(document).on("click",".p2",function(){previmg();return false;});
 
 	$(document).on("click",".p4",function(){nextimg();return false;});

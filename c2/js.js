@@ -4,6 +4,7 @@ window.onload=function ()
 	var wrap = document.getElementById("wrap");
 	var black = document.getElementById("black");
 	var big = document.getElementById("big");
+	
 	//navigate button
 	var left = document.getElementById("left");
 	var right = document.getElementById("right");
