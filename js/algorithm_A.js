@@ -12,8 +12,8 @@ demo1 = (str) => {
     return str == str.split('').reverse().join('');
 }
 
-console.log(demo1(str1));//false
-console.log(demo1(str2));//ture
+console.log(demo1(str1));// false
+console.log(demo1(str2));// ture
 
 function demo2(str) {
     console.log('text is:', str);
