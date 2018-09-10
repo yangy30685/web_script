@@ -34,6 +34,8 @@ demo2(str2);
  */
 
 var arr1 = [2, 4, 2, 2, 5, 6, 7, 8, 9, 9, 9];
+console.log("type: " + typeof arr1);
+
 function  demo3(arr) {
     let arr_temp = []; // a container for repeat elements
     for (let m = 0; m < arr.length; m++) {
@@ -48,6 +50,8 @@ document.write("the new array is : ", demo3(arr1), "<br>");
 /************************* Seperate Line *************************/
 
 var str1 = 'jhadfgskjfajhdewqe';
+console.log("type: " + typeof str1);
+
 var arr1 = str1.split("");
 
 document.write("split() = ", arr1, "<br>");
@@ -69,11 +73,6 @@ function demo4() {
     console.log("no repeat = ", arrA); // no repeat element
     console.log("number of repeat letters = ", arrB); // correspond times of the element
    
-    let array1 = [1, 4, 2];
-    console.log("array 1 type is : ", typeof(array1));
-    console.log(Math.max(...array1));
-    // expected output: 3
-
     console.log(typeof(arrB));
     console.log(Math.max(...arrB));
     
@@ -81,21 +80,22 @@ function demo4() {
     console.log(arrA[arrB.indexOf(Math.max(...arrB))]);
     //use apply to find the biggest number
     console.log(arrA[arrB.indexOf(Math.max.apply(Math,arrB))]);  
-
 }
 
 demo4();
 
+var arrMax = [1, 2, 3, 4, 5, 3];
+console.log("arrMax type is : ", typeof(arrMax));
+console.log(Math.max(...arrMax));
+// expected output: 3
+
 //demo of apply()
-var obj_1 =
-{
-    fullNmae: function(city,country)
-    {
-        return this.firstName+this.lastName+","+city+" "+country;
+var obj_1 = {
+    fullNmae: function(city,country) {
+        return this.firstName + this.lastName + "," + city +" " + country;
     }
 }
-var obj_2=
-{
+var obj_2 = {
     firstName :"DrYang",
     lastName: "Studio"
 }
