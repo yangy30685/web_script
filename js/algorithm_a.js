@@ -5,25 +5,24 @@
 * @src: http://www.cnblogs.com/MythLeige/p/6047838.html
 ****************************************************************/
 
-var str1 = 'abcdefgh';
-var str2 = 'abcdcba';
+var str1 = "abcdefgh";
+var str2 = "abcdcba";
 
 demo1 = (str) => {
-    return str == str.split('').reverse().join('');
+    document.write(str.split(""),"<br>");
+    return str == str.split("").reverse().join("");
 }
-
-console.log(demo1(str1));// false
-console.log(demo1(str2));// ture
 
 function demo2(str) {
-    console.log('text is:', str);
-    console.log('split:',str.split(''));
-    console.log('split + reverse:',str.split('').reverse());
-    console.log('split + reverse + join:',str.split('').reverse().join(''));
+    console.log("original text is:", str);
+    console.log("split: ", str.split(""));
+    console.log('split + reverse: ', str.split('').reverse());
+    console.log('split + reverse + join: ', str.split('').reverse().join(''));
 }
-// string to array by split
-// use array function reverse
-// join array to string by join
+
+console.log("str1 is : ", demo1(str1)); // false
+console.log("str2 is : ", demo1(str2)); // ture
+
 demo2(str1);
 demo2(str2);
 
@@ -34,44 +33,44 @@ demo2(str2);
  *or -1 if it is not present.
  */
 
-var arr1 = [2,4,2,2,5,6,7,8,9,9,9];
+var arr1 = [2, 4, 2, 2, 5, 6, 7, 8, 9, 9, 9];
 function  demo3(arr) {
-    var arr1=[];//a container for repeat elements
-    for (var m=0;m<arr.length;m++) {
-        if(arr1.indexOf(arr[m])==-1)
-            arr1.push(arr[m]);
+    let arr_temp = []; // a container for repeat elements
+    for (let m = 0; m < arr.length; m++) {
+        if (arr_temp.indexOf(arr[m]) == -1) // if not exist return -1
+            arr_temp.push(arr[m]);
     }
-    return arr1;
+    return arr_temp;
 }
-console.log(demo3(arr1));
+document.write("the original array is  : ", arr1, "<br>");
+document.write("the new array is : ", demo3(arr1), "<br>");
 
 /************************* Seperate Line *************************/
 
-var str1='jhadfgskjfajhdewqe';
-var arr1=str1.split('');
+var str1 = 'jhadfgskjfajhdewqe';
+var arr1 = str1.split("");
 
-console.log(arr1);
+document.write("split() = ", arr1, "<br>");
 
 function demo4() {
-    var arrA=[];
-    var arrB=[];
-    for(var m=0; m<arr1.length;m++)
-    {
-        if(arrA.indexOf(arr1[m])==-1)
-        {
+    var arrA = [];
+    var arrB = [];
+    for (let m = 0; m < arr1.length; m++) {
+        if (arrA.indexOf(arr1[m]) == -1) {
             arrA.push(arr1[m]);
-            arrB.push(1)
+            arrB.push(1);
         }
-        else
-        {
-            arrB[arrA.indexOf(arr1[m])]++;
+        else {
+            let arrA_position = arrA.indexOf(arr1[m]);
+            arrB[arrA_position]++;
         }
     }
-    console.log(arrA);//no repeat element
-    console.log(arrB);//correspond times of the element
+
+    console.log("no repeat = ", arrA); // no repeat element
+    console.log("number of repeat letters = ", arrB); // correspond times of the element
    
-    var array1 = [1, 4, 2];
-    console.log(typeof(array1));
+    let array1 = [1, 4, 2];
+    console.log("array 1 type is : ", typeof(array1));
     console.log(Math.max(...array1));
     // expected output: 3
 
@@ -84,6 +83,7 @@ function demo4() {
     console.log(arrA[arrB.indexOf(Math.max.apply(Math,arrB))]);  
 
 }
+
 demo4();
 
 //demo of apply()
