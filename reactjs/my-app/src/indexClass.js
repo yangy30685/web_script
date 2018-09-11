@@ -36,10 +36,10 @@ person.name = '';
 console.log('2nd name is '+ person.name);
 
 //alternative way to visit value
-const tarMem ='name';
+const tarMem = 'name';
 person[tarMem] = 'john';
 
-console.log('3rd name is '+ person.name);
+console.log('3rd name is ' + person.name);
 /************************ Seperate Line **************************/
 
 const square_1 = function (number) {
@@ -50,7 +50,7 @@ console.log('1st: ' + square_1(2));
 const square_2 = number => number * number;
 console.log('2nd: ' + square_2(3));
 
-//demo filter
+// demo filter
 var words = [ 'red','black','blue']
 
 const result = words.filter(temp => temp.length < 4);
@@ -65,7 +65,7 @@ const jobs = [
 
 const list_jobs = jobs.filter(function(args){return args.isactive});//only return true value
 //other way to do it 
-const list_jobs_1= jobs.filter(args => args.isactive);
+const list_jobs_1 = jobs.filter(args => args.isactive);
 console.log(list_jobs);
 console.log(list_jobs_1);
 
@@ -91,13 +91,14 @@ const car_2 = {
 }
 
 car_2.speed();
+
 /************************ Seperate Line **************************/
 
 const colors = ['red' ,'blue', 'black'];
 const items = colors.map(function (args){
-    return '<li>'+args+'</li>';
+    return '<li>' + args + '</li>';
 });
-const items_1 = colors.map(args => '<li>'+args+'</li>');
+const items_1 = colors.map(args => '<li>' + args + '</li>');
 const items_2 = colors.map(args => `<li>${args}</li>`);
 console.log(colors);
 console.log(items);
