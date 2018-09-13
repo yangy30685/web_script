@@ -105,9 +105,9 @@ console.log("max is:", Math.max(1,2,3,3));
 console.log("max is:", Math.max.apply(null, [1,2,3,3]));
 console.log("max is:", Math.max.apply(Math, [1,2,3,4]));
 
-const arr_Max = [1, 2, 3, 4, 5, 5];
+const arr_Max = [1, 2, 3, 4, 5, 5]; //array
 Math.max.apply(" ", arr_Max);
-console.log(Math instanceof , typeof Math);
+console.log(typeof Math);
 
 
 /************************* Seperate Line *************************/
