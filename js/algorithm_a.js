@@ -28,10 +28,8 @@ demo2(str2);
 
 /************************* Seperate Line *************************/
 
-/*The indexOf() method returns the first index 
- *at which a given element can be found in the array, 
- *or -1 if it is not present.
- */
+// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+
 
 var arr1 = [2, 4, 2, 2, 5, 6, 7, 8, 9, 9, 9];
 console.log("type: " + typeof arr1);
@@ -76,10 +74,10 @@ function demo4() {
     console.log(typeof(arrB));
     console.log(Math.max(...arrB));
     
-    //one method to find the biggest number
+    // one method to find the biggest number
     console.log(arrA[arrB.indexOf(Math.max(...arrB))]);
     
-    //use apply to find the biggest number
+    // use apply to find the biggest number
     console.log(arrA[arrB.indexOf(Math.max.apply(Math,arrB))]);  
 }
 
@@ -90,7 +88,7 @@ console.log("arrMax type is : ", typeof(arrMax));
 console.log(Math.max(...arrMax));
 // expected output: 3
 
-//demo of apply()
+// demo of apply()
 var obj_1 = {
     fullNmae: function(city,country) {
         return this.firstName + this.lastName + "," + city +" " + country;
@@ -100,16 +98,16 @@ var obj_2 = {
     firstName: "DrYang",
     lastName: "Studio"
 }
-console.log(obj_1.fullNmae.apply(obj_2,["Birmingham","UK"]));
+console.log(obj_1.fullNmae.apply(obj_2,["Birmingham", "UK"]));
 
-//demo of max
-console.log(Math.max(1,2,3,3));
-console.log(Math.max.apply(null,[1,2,3,3]));
-console.log(Math.max.apply(Math,[1,2,3,4]));
+// demo of max
+console.log("max is:", Math.max(1,2,3,3));
+console.log("max is:", Math.max.apply(null, [1,2,3,3]));
+console.log("max is:", Math.max.apply(Math, [1,2,3,4]));
 
-var arr_Max=[1, 2, 3, 4, 5, 5];
+const arr_Max = [1, 2, 3, 4, 5, 5];
 Math.max.apply(" ", arr_Max);
-console.log(typeof(Math));
+console.log(Math instanceof , typeof Math);
 
 
 /************************* Seperate Line *************************/
@@ -119,9 +117,9 @@ console.log(typeof(Math));
 // ascending
 var arr1=[2,3,45,64,321,3,21,321,31,999];
 
-function demo5(arr) {   //for n th element only need to compare n-1 th
-    for(var m = 0; m < arr.length-1; m++) {   //compare the current element to the element behind it
-        for(var n = 0; n < arr.length-m-1; n++) {   //place the largest number to the end after 1st round
+function demo5(arr) {   // for n th element only need to compare n-1 th
+    for(var m = 0; m < arr.length-1; m++) {   // compare the current element to the element behind it
+        for(var n = 0; n < arr.length-m-1; n++) {   // place the largest number to the end after 1st round
             if(arr[n] > arr[n+1]) {
                 let temp = arr[n];
                 arr[n] = arr[n+1];
@@ -226,10 +224,10 @@ function demo9(n) {
     var str1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz9876543210";
 
     var xxx = str1.length;
-    console.log(xxx); //return 62
-    console.log(str1.charAt(2));//return C
+    console.log(xxx); // return 62
+    console.log(str1.charAt(2)); // return C
 
-    //target
+    // target
     var str2 = "";  
     for (var m = 0; m < n ; m ++) {  
             str2 += str1.charAt(Math.floor(Math.random()*str1.length));  
@@ -246,16 +244,13 @@ console.log(Math.floor(1.1));
 console.log(Math.floor(2.1));
 
 // for integer number
-function demo10(max) 
-{
-  
+function demo10(max) {
   return Math.floor(Math.random()*Math.floor(max));
 }
 console.log(demo10(3));
 // expected output: 0 1 2
 
-function demo10_A(min, max) 
-{
+function demo10_A(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; 
