@@ -254,6 +254,7 @@ function demo10_A(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; 
+  
   // The maximum is exclusive and the minimum is inclusive
 }
 console.log(demo10_A(0.1, 100.8));
@@ -288,6 +289,7 @@ function demo11(node,classname) {
 
 // normal get tat
 var text = document.getElementById('text'); 
+
 // use function demo11 to get function 
 var cs = demo11(text,'cs');  
 console.log(cs); // [div.cs, p.cs]    
