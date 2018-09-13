@@ -78,6 +78,7 @@ function demo4() {
     
     //one method to find the biggest number
     console.log(arrA[arrB.indexOf(Math.max(...arrB))]);
+    
     //use apply to find the biggest number
     console.log(arrA[arrB.indexOf(Math.max.apply(Math,arrB))]);  
 }
@@ -113,9 +114,7 @@ console.log(typeof(Math));
 
 /************************* Seperate Line *************************/
 
-/*
- *bubble sorting
- */
+// bubble sorting
 
 // ascending
 var arr1=[2,3,45,64,321,3,21,321,31,999];
@@ -157,9 +156,8 @@ console.log(demo6(arr1));
 
 /************************* Seperate Line *************************/
 
-/*
- *quick sorting
- */
+// quick sorting
+
 
 var arr1 = [1,4,765,86,53,87,53,32,6,64,2,3,767,34,0,4,35,6];
 function demo7(arr) {
@@ -195,9 +193,8 @@ console.log(([].concat(array1) + "," + [].concat(array2)).split(","));
 
 /************************* Seperate Line *************************/
 
-/*
- *swap without temp variable
- */
+// swap without temp variable
+
 var a = [1,2]; 
 function demo8(a) {
     a[1] = a[1]-a[0]
@@ -210,9 +207,8 @@ console.log(demo8(a));
 
 /************************* Seperate Line *************************/
 
-/*
- *demo of math
- */
+// demo of math
+
 var arr1 = [2,44,3,-12,43,5,8,67,54,32,-211];  
 var max = Math.max.apply(Math,arr1); 
 var max2 = Math.max(...arr1); 
@@ -223,9 +219,8 @@ console.log(max2-min2);
 
 /************************* Seperate Line *************************/
 
-/*
- *generate random string with n length
- */
+// generate random string with n length
+
 function demo9(n) {  
     //soruce
     var str1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz9876543210";
@@ -243,14 +238,14 @@ function demo9(n) {
 }  
 console.log(demo9(10)); 
 
-//demo for details
-//expect a number x which 0<=x<1;
+// demo for details
+// expect a number x which 0<=x<1;
 console.log(Math.random()); 
 console.log(Math.floor(0.1));
 console.log(Math.floor(1.1));
 console.log(Math.floor(2.1));
 
-//for integer number
+// for integer number
 function demo10(max) 
 {
   
@@ -264,16 +259,14 @@ function demo10_A(min, max)
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min)) + min; 
-  //The maximum is exclusive and the minimum is inclusive
+  // The maximum is exclusive and the minimum is inclusive
 }
 console.log(demo10_A(0.1, 100.8));
 
 /************************* Seperate Line *************************/
 
-/*
- *search all tags
- */
- 
+// search all tags
+
 function demo11(node,classname) {   
        if(node.getElementsByClassName) 
        { 
@@ -298,9 +291,8 @@ function demo11(node,classname) {
        }  
     }  
 
-//normal get tat
+// normal get tat
 var text = document.getElementById('text'); 
-//use function demo11 to get function 
+// use function demo11 to get function 
 var cs = demo11(text,'cs');  
-console.log(cs);//[div.cs, p.cs]    
-
+console.log(cs); // [div.cs, p.cs]    
