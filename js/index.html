@@ -17,7 +17,33 @@
 	</div> 
 	<hr>
 	<script type = "text/javascript" src = "algorithm_a.js"></script>
+	<script type = "text/javascript" src = "algorithm_b.js"></script>
+	
+	<hr>
+	<a href= "javaScript:void(0)" onClick="alert('Hello from browser');" >Say hello browser</a><br>
+	<a href= "javaScript:void(0)" onClick="openAlert('Hi How are you');" >Say hello javascript</a><br>
 	<script type = "text/javascript" src = "algorithm_tree.js"></script>
+	<a href="javaScript:void(0)" 
+	onmouseover="this.style.color='cyan';" 
+	onmouseout="this.style.color='red';" 
+	ondblclick="this.text='You double clicked me';" 
+	onmousedown="this.text='Don\'t press too hard';"
+	onmouseup="this.text='Thank you'">Onmouse demo</a><br>
+	<br>
+	<hr>
+	<div>1st input:
+	<input type="text" id="randInput" onchange="let dataEntered = document.getElementById('randInput').value; alert('User typed: '+ dataEntered)">
+	</div>
+	<div>2nd input:
+	<form action="#" id="sampForm">
+		<input id='charInput' type="text">
+		<p id="keyData">key data here</p>
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+	</form></div>
+	<hr>
+	<img src="../src/favicon.ico" id="logo">
+
 	
 	
 
